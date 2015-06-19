@@ -13,7 +13,8 @@ dependencies:
 
 test:
   override:
-    - "[ $(curl -s http://localhost:8080/) = 'Hello World' ]"
+    - "curl http://localhost:8080/"
+    - "[[ $(curl http://localhost:8080/) = 'Hello World!' ]]"
 
 deployment:
   hub: 
